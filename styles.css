@@ -1,0 +1,281 @@
+/* ==========================================================================
+   BOMBAY BIRYANI Catering Services - Premium Stylesheet
+   Created by Antigravity AI
+   ========================================================================== */
+
+:root {
+    --bg-dark-royal: #0c0e12;
+    --bg-dark-card: #151821;
+    --bg-dark-glass: rgba(12, 14, 18, 0.88);
+    --primary-orange: #f25c05;
+    --primary-orange-hover: #d94e00;
+    --primary-gold: #e5b842;
+    --primary-gold-hover: #c99f30;
+    --whatsapp-green: #25d366;
+    --whatsapp-green-hover: #1ebd56;
+    --text-white: #ffffff;
+    --text-light-50: rgba(255, 255, 255, 0.75);
+    --text-muted: #9ca3af;
+    --border-dark: rgba(255, 255, 255, 0.1);
+    --font-main: 'Outfit', -apple-system, BlinkMacSystemFont, sans-serif;
+    --font-heading: 'Playfair Display', Georgia, serif;
+}
+
+body {
+    font-family: var(--font-main);
+    background-color: var(--bg-dark-royal);
+    color: var(--text-white);
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Typography & Utility classes */
+h1, h2, h3, h4, .font-heading {
+    font-family: var(--font-heading);
+}
+
+.text-orange { color: var(--primary-orange) !important; }
+.text-gold { color: var(--primary-gold) !important; }
+.bg-dark-royal { background-color: var(--bg-dark-royal) !important; }
+.bg-dark-card { background-color: var(--bg-dark-card) !important; }
+.bg-orange { background-color: var(--primary-orange) !important; }
+.bg-gold { background-color: var(--primary-gold) !important; }
+
+.font-xs { font-size: 0.78rem; }
+.font-sm { font-size: 0.88rem; }
+.font-lg { font-size: 1.25rem; }
+.max-w-700 { max-width: 700px; }
+.max-w-800 { max-width: 800px; }
+
+/* Backdrop Blur */
+.backdrop-blur {
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+/* Header & Top Bar */
+.top-bar {
+    letter-spacing: 0.2px;
+}
+
+.brand-title {
+    font-family: var(--font-heading);
+    letter-spacing: 0.5px;
+}
+
+.brand-sub {
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.nav-link {
+    color: rgba(255, 255, 255, 0.85) !important;
+    font-weight: 500;
+    padding: 0.5rem 0.8rem !important;
+    transition: all 0.2s ease;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--primary-gold) !important;
+}
+
+.btn-whatsapp-header {
+    background-color: var(--whatsapp-green);
+    color: #fff !important;
+    font-weight: 600;
+    font-size: 0.88rem;
+    transition: all 0.3s ease;
+    border: none;
+}
+
+.btn-whatsapp-header:hover {
+    background-color: var(--whatsapp-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+}
+
+/* Hero Section & Slider */
+.hero-section {
+    min-height: 85vh;
+    position: relative;
+}
+
+.hero-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.hero-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+}
+
+.hero-slide.active {
+    opacity: 1;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(12, 14, 18, 0.85) 0%, rgba(12, 14, 18, 0.92) 100%);
+    z-index: 1;
+}
+
+.bg-gold-glass {
+    background: rgba(229, 184, 66, 0.15);
+    backdrop-filter: blur(8px);
+}
+
+/* Custom Buttons */
+.btn-gradient-orange {
+    background: linear-gradient(135deg, #f25c05 0%, #d94e00 100%);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-gradient-orange:hover {
+    background: linear-gradient(135deg, #ff6b14 0%, #f25c05 100%);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(242, 92, 5, 0.4);
+}
+
+.btn-outline-gold {
+    border: 2px solid var(--primary-gold);
+    color: var(--primary-gold);
+    background: transparent;
+    transition: all 0.3s ease;
+}
+
+.btn-outline-gold:hover {
+    background-color: var(--primary-gold);
+    color: #0c0e12;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(229, 184, 66, 0.3);
+}
+
+.btn-whatsapp-lg {
+    background-color: var(--whatsapp-green);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp-lg:hover {
+    background-color: var(--whatsapp-green-hover);
+    color: #fff;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(37, 211, 102, 0.4);
+}
+
+/* Menu Filter Tabs */
+.btn-menu-tab {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light-50);
+    border: 1px solid var(--border-dark);
+    padding: 0.6rem 1.2rem;
+    border-radius: 50rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-menu-tab:hover {
+    color: #fff;
+    background: rgba(255, 255, 255, 0.1);
+    border-color: var(--primary-gold);
+}
+
+.btn-menu-tab.active {
+    background: var(--primary-orange);
+    color: #fff;
+    border-color: var(--primary-orange);
+    box-shadow: 0 4px 15px rgba(242, 92, 5, 0.3);
+}
+
+/* Card Effects */
+.menu-card, .service-card {
+    transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hover-lift:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+    border-color: rgba(229, 184, 66, 0.4) !important;
+}
+
+.hover-scale {
+    transition: transform 0.3s ease;
+}
+
+.hover-scale:hover {
+    transform: scale(1.05);
+}
+
+/* Form Styles */
+.form-dark {
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid var(--border-dark);
+    color: #fff;
+    border-radius: 0.5rem;
+    padding: 0.75rem 1rem;
+}
+
+.form-dark:focus {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-color: var(--primary-gold);
+    color: #fff;
+    box-shadow: 0 0 0 0.25rem rgba(229, 184, 66, 0.15);
+}
+
+.form-dark::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+/* Estimator Button */
+.btn-calc-grade {
+    background: rgba(255, 255, 255, 0.05);
+    color: var(--text-light-50);
+    border: 1px solid var(--border-dark);
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-calc-grade.active, .btn-calc-grade:hover {
+    background: var(--primary-gold);
+    color: #0c0e12;
+    border-color: var(--primary-gold);
+}
+
+/* Floating Actions Bar */
+.floating-btn {
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+    .display-3 {
+        font-size: 2.5rem;
+    }
+    .display-5 {
+        font-size: 2rem;
+    }
+    .top-bar-contact {
+        font-size: 0.8rem;
+    }
+}
